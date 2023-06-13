@@ -1,0 +1,10 @@
+services:
+  influxDB:
+    image: influxdb:2.5.1
+    ports:
+      - 8086:8086
+    volumes:
+      - influxRetention:/var/lib/influxdb2
+
+volumes:
+  influxRetention:

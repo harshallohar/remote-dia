@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "372f038a-f033-4a60-91da-adfdf4f4aa08",
+    "name": "urls",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-12-03T10:19:09.465Z",
+    "modified": "2022-12-03T10:19:09.465Z",
+    "data": [
+      {
+        "name": "LURL",
+        "value": "localhost:2323"
+      },
+      {
+        "name": "URL",
+        "value": "http://3.136.155.225/inf/api"
+      }
+    ]
+  }
+]

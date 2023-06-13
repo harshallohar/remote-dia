@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.33.0",
+    "@influxdata/influxdb-client-apis": "^1.33.0",
+    "csv": "^6.2.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "sqlite3": "^5.1.2",
+    "winston": "^3.8.2",
+    "winston-loki": "^6.0.6"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.mjs"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "thunder-tests/*"
+    ]
+  }
+}
