@@ -1,3 +1,4 @@
+version: '3'
 services:
   influxDB:
     image: influxdb:2.5.1
@@ -5,6 +6,18 @@ services:
       - 8086:8086
     volumes:
       - influxRetention:/var/lib/influxdb2
+    restart: always
+
+  remote:
+    container_name: remote2
+    build: .
+    ports:
+      - 5000:5000
+    restart: always
+    volumes:
+      - remote:/app/remoteDB
 
 volumes:
   influxRetention:
+  remote:
+
