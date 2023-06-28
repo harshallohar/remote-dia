@@ -1,23 +1,14 @@
 version: '3'
 services:
-  influxDB:
-    image: influxdb:2.5.1
-    ports:
-      - 8086:8086
-    volumes:
-      - influxRetention:/var/lib/influxdb2
-    restart: always
-
-  remote:
-    container_name: remote2
-    build: .
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 5000:5000
-    restart: always
+    env_file:
+      - .env
     volumes:
-      - remote:/app/remoteDB
-
+      - backendvol:/data/db
 volumes:
-  influxRetention:
-  remote:
-
+  backendvol:
